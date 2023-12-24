@@ -21,6 +21,6 @@ spec:
     spec:
       containers:
       - name: cs-app
-        image: #image name 
+        image: hellophoenix-css:latest
         ports:
         - containerPort: 

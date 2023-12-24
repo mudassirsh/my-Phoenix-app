@@ -21,6 +21,6 @@ spec:
     spec:
       containers:
       - name: web-app
-        image: #image name 
+        image: hellophoenix-web:latest
         ports:
         - containerPort: 8000
