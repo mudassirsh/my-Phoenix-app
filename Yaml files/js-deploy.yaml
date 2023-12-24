@@ -1,0 +1,26 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: js-app-deploy
+  labels:
+    name: js-app-deploy
+    app: phoenix-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      name: js-app-pod
+      app: js-app
+  template:
+    metadata:
+      name: js-app-pod
+      labels:
+        name: js-app-pod
+        app: js-app
+    spec:
+      containers:
+      - name: js-app
+        image: #image name 
+        ports:
+        - containerPort: 

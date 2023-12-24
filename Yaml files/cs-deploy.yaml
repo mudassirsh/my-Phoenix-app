@@ -1,0 +1,26 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: cs-app-deploy
+  labels:
+    name: cs-app-deploy
+    app: phoenix-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      name: cs-app-pod
+      app: cs-app
+  template:
+    metadata:
+      name: cs-app-pod
+      labels:
+        name: cs-app-pod
+        app: cs-app
+    spec:
+      containers:
+      - name: cs-app
+        image: #image name 
+        ports:
+        - containerPort: 

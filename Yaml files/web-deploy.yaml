@@ -1,0 +1,26 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: web-app-deploy
+  labels:
+    name: web-app-deploy
+    app: phoenix-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      name: web-app-pod
+      app: web-app
+  template:
+    metadata:
+      name: web-app-pod
+      labels:
+        name: web-app-pod
+        app: web-app
+    spec:
+      containers:
+      - name: web-app
+        image: #image name 
+        ports:
+        - containerPort: 8000
