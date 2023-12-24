@@ -7,9 +7,6 @@ metadata:
     name: cs-service
     app: phoenix-app
 spec:
-  ports:
-  - port: 
-    targetPort: 
   selector:
     name: cs-app-pod
     app: cs-app
